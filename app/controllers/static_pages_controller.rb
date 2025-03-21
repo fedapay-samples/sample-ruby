@@ -5,9 +5,9 @@ class StaticPagesController < ApplicationController
     def create
 
       # Vous pouvez envisager de déplacer ces configurations dans un initializer
-      FedaPay.api_key = 'api_secret_key'
+      FedaPay.api_key = 'sk_sandbox_XXXXXXXXXXX' # Remplacer par votre clé secrète
 
-      FedaPay.environment = 'environment' # Ou 'live' en production
+      FedaPay.environment = 'environment' # 'sandbox' Ou 'live' en production
   
       
         transaction = FedaPay::Transaction.create(
