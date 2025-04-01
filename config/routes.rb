@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root "static_pages#home"
 
-  post "/payer",  to: "static_pages#create"
+  post "/payment",  to: "static_pages#create"
 
   get '/payment_status', to: 'static_pages#payment_status'
 
