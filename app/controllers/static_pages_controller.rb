@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
 
     begin
       # Configuration de l'API FedaPay
-      FedaPay.api_key = 'sk_sandbox_XXXXXXXXXXXXXX'
+      FedaPay.api_key = 'sk_sandbox_XXXXXXXXXXXXX'
       FedaPay.environment = 'env' # 'sandbox' ou 'live' en production
   
       # Création de la transaction
@@ -52,7 +52,7 @@ class StaticPagesController < ApplicationController
         transaction = FedaPay::Transaction.retrieve(transaction_id)
         status = transaction.status
     
-        flash[:notice] = if status == 'approved'
+        flash[:notice] = if status == 'approved' or 'transferred'
                             "Paiement réussi !"
                           else
                             "Échec du paiement. Statut : #{status}"
