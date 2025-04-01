@@ -6,8 +6,8 @@ class StaticPagesController < ApplicationController
 
     begin
       # Configuration de l'API FedaPay
-      FedaPay.api_key = 'sk_sandbox_2u0Z_52tfTEenBgbrMFvr9u6'
-      FedaPay.environment = 'sandbox' # 'sandbox' ou 'live' en production
+      FedaPay.api_key = 'sk_sandbox_XXXXXXXXXXXXXX'
+      FedaPay.environment = 'env' # 'sandbox' ou 'live' en production
   
       # Création de la transaction
       transaction = FedaPay::Transaction.create(
