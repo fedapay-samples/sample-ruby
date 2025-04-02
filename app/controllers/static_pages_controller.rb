@@ -52,7 +52,7 @@ class StaticPagesController < ApplicationController
         transaction = FedaPay::Transaction.retrieve(transaction_id)
         status = transaction.status
     
-        flash[:notice] = if status == 'approved' or 'transferred'
+        flash[:notice] = if %w[approved transferred].include?(status)
                             "Paiement réussi !"
                           else
                             "Échec du paiement. Statut : #{status}"
