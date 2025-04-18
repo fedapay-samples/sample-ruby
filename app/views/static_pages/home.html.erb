@@ -1,0 +1,152 @@
+        <style>
+
+        .card {
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+        /* Style du message flash */
+    .flash-message {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #28a745; /* Vert pour succès */
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .flash-message.error {
+        background-color: #dc3545; /* Rouge pour échec */
+    }
+    </style>
+
+    
+        
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-5 shadow-sm">
+                    <%= image_tag '1.webp', class: 'img-fluid' %>
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Citizen </h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                            Montre Citizen - Collection Super Titanium - Mechanical - 
+                            Deux aiguilles, date, composée d'un boîtier titane de 40,5 mm,
+                            d'un cadran vert avec petite seconde et d'un bracelet titane.
+                            </p>
+                        </div>
+                          <%= button_to 'Payer 100000 FCFA', payment_path, method: :post, data: { turbo: false }, class: "btn btn-outline-primary rounded-1 float-end" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-5 shadow-sm">
+                    <%= image_tag '2.webp', class: 'img-fluid' %>
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Frédérique Constant </h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                            Montre Frédérique Constant Classics Index, automatique 3
+                            aiguilles, composée d'un boitier acier de 40 mm, d'un cadran
+                            argenté coeur ouvert avec les clous de Paris guilloché sur bracelet en cuir noir.
+                            </p>
+                        </div>
+                         <%= button_to 'Payer 100000 FCFA', payment_path, method: :post, data: { turbo: false }, class: "btn btn-outline-primary rounded-1 float-end" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-5 shadow-sm">
+                    <%= image_tag '3.webp', class: 'img-fluid' %>
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Zeppelin</h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                            Cette montre Zeppelin de la collection 100 ans se compose
+                            d'un boitier rond de 42mm en acier, d'un cadran de couleur
+                            ivoire et d'un bracelet en cuir noir. Etanchéité 50m.
+                            </p>
+                        </div>
+                         <%= button_to 'Payer 100000 FCFA', payment_path, method: :post, data: { turbo: false }, class: "btn btn-outline-primary rounded-1 float-end" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-5 shadow-sm">
+                    <%= image_tag '4.webp', class: 'img-fluid' %>
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Maserati</h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                            Montre de la collection Competizione, 3 aiguilles date,
+                            composée d'un boitier de 43mm en acier, d'un cadran bleu
+                            et d'un bracelet en acier.
+                            </p>
+                        </div>
+                          <%= button_to 'Payer 100000 FCFA', payment_path, method: :post, data: { turbo: false }, class: "btn btn-outline-primary rounded-1 float-end" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-5 shadow-sm">
+                    <%= image_tag '5.webp', class: 'img-fluid' %>
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Tissot </h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                            Montre de la collection PR100,
+                            mouvement quartz chronographe, boitier en acier argenté
+                            de 40mm avec un cadran vert sur un bracelet en acier argenté.
+                            </p>
+                        </div>
+                        <%= button_to 'Payer 100000 FCFA', payment_path, method: :post, data: { turbo: false }, class: "btn btn-outline-primary rounded-1 float-end" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-5 shadow-sm">
+                    <%= image_tag '6.webp', class: 'img-fluid' %>
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Seiko </h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                            Montre Seiko Presage Cocktail Edition homme automatique,
+                            boitier rond de 40,5mm, 3 aiguilles date, cadran bleu clair avec index,
+                            bracelet en acier.
+                            </p>
+                        </div>
+                   <%= button_to 'Payer 100000 FCFA', payment_path, method: :post, data: { turbo: false }, class: "btn btn-outline-primary rounded-1 float-end" %>
+                    </div>
+                </div>
+            </div>
+            <!--Row-->
+        </div>
